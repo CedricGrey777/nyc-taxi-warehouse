@@ -1,0 +1,82 @@
+ Container nyc-taxi-warehouse-cli-run-b27fac309da5 Creating 
+ Container nyc-taxi-warehouse-cli-run-b27fac309da5 Created 
+No broken requirements found.
+{
+  "kind": "synthetic_fixture",
+  "source_files": {
+    "2024-01": "/tmp/taxi-verification/fixtures/yellow_tripdata_2024-01.parquet",
+    "2024-02": "/tmp/taxi-verification/fixtures/yellow_tripdata_2024-02.parquet",
+    "2024-03": "/tmp/taxi-verification/fixtures/yellow_tripdata_2024-03.parquet"
+  },
+  "zones": "/tmp/taxi-verification/fixtures/zones.csv",
+  "expected_per_month": {
+    "raw": 9,
+    "accepted": 3,
+    "quarantine": 6,
+    "amount": "25.00"
+  }
+}
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+26/11/02 07:18:16 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+{
+  "run_id": "19c5b759f1074067ab808d3a38b624e3",
+  "month": "2024-01",
+  "data_root": "/tmp/taxi-verification/warehouse",
+  "run_dir": "/tmp/taxi-verification/warehouse/runs/2024-01/19c5b759f1074067ab808d3a38b624e3",
+  "status": "published",
+  "started_at": "2026-11-02T07:18:15.144362+00:00",
+  "source": {
+    "path": "/tmp/taxi-verification/warehouse/raw/2024-01/6fc63b47cd2055a4db04eacd14ce820de3d613bab15c26be23705476244a5712.parquet",
+    "origin": "/tmp/taxi-verification/fixtures/yellow_tripdata_2024-01.parquet",
+    "kind": "local_file",
+    "sha256": "6fc63b47cd2055a4db04eacd14ce820de3d613bab15c26be23705476244a5712",
+    "bytes": 1437,
+    "observed_at": "2026-11-02T07:18:15.144761+00:00"
+  },
+  "zones": {
+    "path": "/tmp/taxi-verification/warehouse/raw/zones/a5df19824943bc713931df0e54cf81602c2ded4f8dd3d64559dafd8bf329e71b.csv",
+    "origin": "/tmp/taxi-verification/fixtures/zones.csv",
+    "kind": "local_file",
+    "sha256": "a5df19824943bc713931df0e54cf81602c2ded4f8dd3d64559dafd8bf329e71b",
+    "bytes": 104,
+    "observed_at": "2026-11-02T07:18:15.144939+00:00"
+  },
+  "quality": {
+    "raw_count": 9,
+    "accepted_count": 3,
+    "quarantine_count": 6,
+    "parseable_amount_total": "40.00",
+    "accepted_amount_total": "25.00",
+    "quarantine_amount_total": "15.00",
+    "unparseable_amount_count": 1,
+    "identical_source_groups": 1,
+    "identical_source_extra_rows": 1,
+    "quarantine_reasons": {
+      "invalid_time_order": 1,
+      "negative_distance": 1,
+      "outside_source_month": 1,
+      "invalid_pickup": 1,
+      "invalid_distance": 1,
+      "invalid_amount": 1
+    },
+    "unknown_pickup_count": 1,
+    "unknown_dropoff_count": 1,
+    "jvm_peak_rss_kib": 848784,
+    "month": "2024-01",
+    "run_id": "19c5b759f1074067ab808d3a38b624e3",
+    "passed": true,
+    "record_grain": "source observation; identical records retained",
+    "amount_policy": "DECIMAL(18,2); total_amount excludes unrecorded cash tips",
+    "distance_unit": "mile",
+    "errors": []
+  }
+}
+{
+  "month": "2024-01",
+  "record_count": 3,
+  "recorded_charge_total": "25.00",
+  "passed": true,
+  "run_id": "19c5b759f1074067ab808d3a38b624e3",
+  "quarantine_count": 6
+}

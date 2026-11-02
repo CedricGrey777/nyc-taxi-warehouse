@@ -1,0 +1,4 @@
+ Container nyc-taxi-warehouse-cli-run-66a9dfae6d59 Creating 
+ Container nyc-taxi-warehouse-cli-run-66a9dfae6d59 Created 
+.....                                                                    [100%]
+5 passed in 0.02s

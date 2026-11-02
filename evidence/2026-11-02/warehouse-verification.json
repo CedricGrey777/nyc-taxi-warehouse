@@ -1,0 +1,1204 @@
+{
+  "verified_on": "2026-11-02",
+  "evidence_kind": "existing_publication_read_only_verification",
+  "months": [
+    {
+      "month": "2024-01",
+      "run_id": "df6324a68b5743e3b7f67bb59e7e8a0e",
+      "source_sha256": "c4d59da7bbc8abaeeeb1727947ee93d9891a71acb42854bd80db1571b2030510",
+      "zones_sha256": "1a99e105092230f8620f301edcca7f80d3080642ff404d28ed957d3fa222c8ed",
+      "quality": {
+        "raw_count": 2964624,
+        "accepted_count": 2928237,
+        "quarantine_count": 36387,
+        "parseable_amount_total": "79456384.28",
+        "accepted_amount_total": "80307277.95",
+        "quarantine_amount_total": "-850893.67",
+        "unparseable_amount_count": 0,
+        "identical_source_groups": 0,
+        "identical_source_extra_rows": 0,
+        "quarantine_reasons": {
+          "invalid_time_order": 870,
+          "negative_amount": 35499,
+          "outside_source_month": 18
+        },
+        "unknown_pickup_count": 0,
+        "unknown_dropoff_count": 0,
+        "month": "2024-01",
+        "run_id": "df6324a68b5743e3b7f67bb59e7e8a0e",
+        "passed": true,
+        "record_grain": "source observation; identical records retained",
+        "amount_policy": "DECIMAL(18,2); total_amount excludes unrecorded cash tips",
+        "distance_unit": "mile",
+        "errors": []
+      },
+      "published_at": "2026-09-09 07:38:15.405106+00"
+    },
+    {
+      "month": "2024-02",
+      "run_id": "2b25b78294694d71a63fbf93ccb90c6d",
+      "source_sha256": "c76c43c18c6c6664080dd920baab4928988d5786a6b65980792ca7cd796f9f20",
+      "zones_sha256": "1a99e105092230f8620f301edcca7f80d3080642ff404d28ed957d3fa222c8ed",
+      "quality": {
+        "raw_count": 3007526,
+        "accepted_count": 2970630,
+        "quarantine_count": 36896,
+        "parseable_amount_total": "80073615.28",
+        "accepted_amount_total": "80972470.73",
+        "quarantine_amount_total": "-898855.45",
+        "unparseable_amount_count": 0,
+        "identical_source_groups": 1,
+        "identical_source_extra_rows": 1,
+        "quarantine_reasons": {
+          "negative_amount": 36078,
+          "invalid_time_order": 803,
+          "outside_source_month": 15
+        },
+        "unknown_pickup_count": 0,
+        "unknown_dropoff_count": 0,
+        "month": "2024-02",
+        "run_id": "2b25b78294694d71a63fbf93ccb90c6d",
+        "passed": true,
+        "record_grain": "source observation; identical records retained",
+        "amount_policy": "DECIMAL(18,2); total_amount excludes unrecorded cash tips",
+        "distance_unit": "mile",
+        "errors": []
+      },
+      "published_at": "2026-09-09 07:40:32.701995+00"
+    },
+    {
+      "month": "2024-03",
+      "run_id": "4616aab10ec9422db56f14dd3dd45e3f",
+      "source_sha256": "2d4cdc8fb96726cdd3803b13b02d2e61e71d45720aff0ebc693a8bdd1f249823",
+      "zones_sha256": "1a99e105092230f8620f301edcca7f80d3080642ff404d28ed957d3fa222c8ed",
+      "quality": {
+        "raw_count": 3582628,
+        "accepted_count": 3537170,
+        "quarantine_count": 45458,
+        "parseable_amount_total": "97162913.97",
+        "accepted_amount_total": "98305286.91",
+        "quarantine_amount_total": "-1142372.94",
+        "unparseable_amount_count": 0,
+        "identical_source_groups": 0,
+        "identical_source_extra_rows": 0,
+        "quarantine_reasons": {
+          "negative_amount": 44307,
+          "invalid_time_order": 1128,
+          "outside_source_month": 23
+        },
+        "unknown_pickup_count": 0,
+        "unknown_dropoff_count": 0,
+        "month": "2024-03",
+        "run_id": "4616aab10ec9422db56f14dd3dd45e3f",
+        "passed": true,
+        "record_grain": "source observation; identical records retained",
+        "amount_policy": "DECIMAL(18,2); total_amount excludes unrecorded cash tips",
+        "distance_unit": "mile",
+        "errors": []
+      },
+      "published_at": "2026-09-09 07:39:44.625669+00"
+    }
+  ],
+  "checks": [
+    {
+      "month": "2024-01",
+      "record_count": 2928237,
+      "recorded_charge_total": "80307277.95",
+      "passed": true,
+      "run_id": "df6324a68b5743e3b7f67bb59e7e8a0e",
+      "quarantine_count": 36387
+    },
+    {
+      "month": "2024-02",
+      "record_count": 2970630,
+      "recorded_charge_total": "80972470.73",
+      "passed": true,
+      "run_id": "2b25b78294694d71a63fbf93ccb90c6d",
+      "quarantine_count": 36896
+    },
+    {
+      "month": "2024-03",
+      "record_count": 3537170,
+      "recorded_charge_total": "98305286.91",
+      "passed": true,
+      "run_id": "4616aab10ec9422db56f14dd3dd45e3f",
+      "quarantine_count": 45458
+    }
+  ],
+  "historical_benchmark": {
+    "month": "2024-01",
+    "run_id": "df6324a68b5743e3b7f67bb59e7e8a0e",
+    "source_sha256": "c4d59da7bbc8abaeeeb1727947ee93d9891a71acb42854bd80db1571b2030510",
+    "input_records": 2928237,
+    "measured_at": "2026-09-09T07:44:45.146152+00:00",
+    "spark_version": "3.5.9",
+    "master": "local[2]",
+    "driver_memory": "3g",
+    "jvm_peak_rss_kib": 1759168,
+    "shuffle_partitions": "4",
+    "aqe_enabled": false,
+    "automatic_broadcast": false,
+    "conditions": "warm JVM/OS cache; no DataFrame cache; excludes download and JVM startup",
+    "repetitions": 5,
+    "seconds": {
+      "merge": [
+        1.84205804599992,
+        1.7295028609999008,
+        1.6498085819998778,
+        1.635458238999945,
+        1.6399077500000203
+      ],
+      "broadcast": [
+        0.6577366619999339,
+        0.4872494060000463,
+        0.44764269400002377,
+        0.37799857100003464,
+        0.45151478999991923
+      ]
+    },
+    "median_seconds": {
+      "merge": 1.6498085819998778,
+      "broadcast": 0.45151478999991923
+    },
+    "outputs_equal": true,
+    "output_groups": 1301,
+    "strategies": {
+      "broadcast": {
+        "plan": "*(4) HashAggregate(keys=[pickup_date#13, pu_borough#1199, do_borough#1203], functions=[count(1), sum(total_amount#10)], output=[pickup_date#13, pu_borough#1199, do_borough#1203, record_count#1298L, charge_total#1300])\n+- Exchange hashpartitioning(pickup_date#13, pu_borough#1199, do_borough#1203, 4), ENSURE_REQUIREMENTS, [plan_id=1986]\n   +- *(3) HashAggregate(keys=[pickup_date#13, pu_borough#1199, do_borough#1203], functions=[partial_count(1), partial_sum(total_amount#10)], output=[pickup_date#13, pu_borough#1199, do_borough#1203, count#1309L, sum#1310, isEmpty#1311])\n      +- *(3) Project [total_amount#10, pickup_date#13, pu_borough#1199, do_borough#1203]\n         +- *(3) BroadcastHashJoin [do_zone_key#6], [do_key#1202], Inner, BuildRight, false\n            :- *(3) Project [do_zone_key#6, total_amount#10, pickup_date#13, pu_borough#1199]\n            :  +- *(3) BroadcastHashJoin [pu_zone_key#5], [pu_key#1198], Inner, BuildRight, false\n            :     :- *(3) Filter (isnotnull(pu_zone_key#5) AND isnotnull(do_zone_key#6))\n            :     :  +- *(3) ColumnarToRow\n            :     :     +- FileScan parquet [pu_zone_key#5,do_zone_key#6,total_amount#10,pickup_date#13] Batched: true, DataFilters: [isnotnull(pu_zone_key#5), isnotnull(do_zone_key#6)], Format: Parquet, Location: InMemoryFileIndex(1 paths)[file:/opt/airflow/data/runs/2024-01/df6324a68b5743e3b7f67bb59e7e8a0e/a..., PartitionFilters: [], PushedFilters: [IsNotNull(pu_zone_key), IsNotNull(do_zone_key)], ReadSchema: struct<pu_zone_key:int,do_zone_key:int,total_amount:decimal(18,2)>\n            :     +- BroadcastExchange HashedRelationBroadcastMode(List(cast(input[0, int, true] as bigint)),false), [plan_id=1943]\n            :        +- *(1) Project [zone_key#28 AS pu_key#1198, borough#29 AS pu_borough#1199]\n            :           +- *(1) Filter isnotnull(zone_key#28)\n            :              +- *(1) ColumnarToRow\n            :                 +- FileScan parquet [zone_key#28,borough#29] Batched: true, DataFilters: [isnotnull(zone_key#28)], Format: Parquet, Location: InMemoryFileIndex(1 paths)[file:/opt/airflow/data/runs/2024-01/df6324a68b5743e3b7f67bb59e7e8a0e/z..., PartitionFilters: [], PushedFilters: [IsNotNull(zone_key)], ReadSchema: struct<zone_key:int,borough:string>\n            +- ReusedExchange [do_key#1202, do_borough#1203], BroadcastExchange HashedRelationBroadcastMode(List(cast(input[0, int, true] as bigint)),false), [plan_id=1943]\n",
+        "operator_metrics": [
+          {
+            "node": "WholeStageCodegen (4)",
+            "key": "pipelineTime",
+            "value": 4
+          },
+          {
+            "node": "HashAggregate",
+            "key": "spillSize",
+            "value": 0
+          },
+          {
+            "node": "HashAggregate",
+            "key": "aggTime",
+            "value": 0
+          },
+          {
+            "node": "HashAggregate",
+            "key": "peakMemory",
+            "value": 135266240
+          },
+          {
+            "node": "HashAggregate",
+            "key": "numOutputRows",
+            "value": 1301
+          },
+          {
+            "node": "HashAggregate",
+            "key": "numTasksFallBacked",
+            "value": 0
+          },
+          {
+            "node": "HashAggregate",
+            "key": "avgHashProbe",
+            "value": 40
+          },
+          {
+            "node": "Exchange",
+            "key": "shuffleRecordsWritten",
+            "value": 1301
+          },
+          {
+            "node": "Exchange",
+            "key": "localMergedChunksFetched",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "shuffleWriteTime",
+            "value": 1508490
+          },
+          {
+            "node": "Exchange",
+            "key": "remoteMergedBytesRead",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "localMergedBlocksFetched",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "corruptMergedBlockChunks",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "remoteMergedReqsDuration",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "remoteMergedBlocksFetched",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "recordsRead",
+            "value": 1301
+          },
+          {
+            "node": "Exchange",
+            "key": "localBytesRead",
+            "value": 47469
+          },
+          {
+            "node": "Exchange",
+            "key": "fetchWaitTime",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "remoteBytesRead",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "mergedFetchFallbackCount",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "localBlocksFetched",
+            "value": 12
+          },
+          {
+            "node": "Exchange",
+            "key": "remoteMergedChunksFetched",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "remoteBlocksFetched",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "dataSize",
+            "value": 119240
+          },
+          {
+            "node": "Exchange",
+            "key": "localMergedBytesRead",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "numPartitions",
+            "value": 4
+          },
+          {
+            "node": "Exchange",
+            "key": "remoteReqsDuration",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "remoteBytesReadToDisk",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "shuffleBytesWritten",
+            "value": 47469
+          },
+          {
+            "node": "WholeStageCodegen (3)",
+            "key": "pipelineTime",
+            "value": 588
+          },
+          {
+            "node": "HashAggregate",
+            "key": "spillSize",
+            "value": 0
+          },
+          {
+            "node": "HashAggregate",
+            "key": "aggTime",
+            "value": 583
+          },
+          {
+            "node": "HashAggregate",
+            "key": "peakMemory",
+            "value": 101449680
+          },
+          {
+            "node": "HashAggregate",
+            "key": "numOutputRows",
+            "value": 1301
+          },
+          {
+            "node": "HashAggregate",
+            "key": "numTasksFallBacked",
+            "value": 0
+          },
+          {
+            "node": "HashAggregate",
+            "key": "avgHashProbe",
+            "value": 30
+          },
+          {
+            "node": "BroadcastHashJoin",
+            "key": "numOutputRows",
+            "value": 2928237
+          },
+          {
+            "node": "BroadcastHashJoin",
+            "key": "numOutputRows",
+            "value": 2928237
+          },
+          {
+            "node": "Filter",
+            "key": "numOutputRows",
+            "value": 2928237
+          },
+          {
+            "node": "ColumnarToRow",
+            "key": "numOutputRows",
+            "value": 2928237
+          },
+          {
+            "node": "ColumnarToRow",
+            "key": "numInputBatches",
+            "value": 752
+          },
+          {
+            "node": "Scan parquet ",
+            "key": "numFiles",
+            "value": 62
+          },
+          {
+            "node": "Scan parquet ",
+            "key": "scanTime",
+            "value": 51
+          },
+          {
+            "node": "Scan parquet ",
+            "key": "pruningTime",
+            "value": 0
+          },
+          {
+            "node": "Scan parquet ",
+            "key": "metadataTime",
+            "value": 0
+          },
+          {
+            "node": "Scan parquet ",
+            "key": "filesSize",
+            "value": 62324122
+          },
+          {
+            "node": "Scan parquet ",
+            "key": "numOutputRows",
+            "value": 2928237
+          },
+          {
+            "node": "Scan parquet ",
+            "key": "numPartitions",
+            "value": 31
+          },
+          {
+            "node": "BroadcastExchange",
+            "key": "broadcastTime",
+            "value": 1
+          },
+          {
+            "node": "BroadcastExchange",
+            "key": "buildTime",
+            "value": 0
+          },
+          {
+            "node": "BroadcastExchange",
+            "key": "collectTime",
+            "value": 29
+          },
+          {
+            "node": "BroadcastExchange",
+            "key": "numOutputRows",
+            "value": 266
+          },
+          {
+            "node": "BroadcastExchange",
+            "key": "dataSize",
+            "value": 1050712
+          },
+          {
+            "node": "WholeStageCodegen (1)",
+            "key": "pipelineTime",
+            "value": 1
+          },
+          {
+            "node": "Filter",
+            "key": "numOutputRows",
+            "value": 266
+          },
+          {
+            "node": "ColumnarToRow",
+            "key": "numOutputRows",
+            "value": 266
+          },
+          {
+            "node": "ColumnarToRow",
+            "key": "numInputBatches",
+            "value": 1
+          },
+          {
+            "node": "Scan parquet ",
+            "key": "numFiles",
+            "value": 1
+          },
+          {
+            "node": "Scan parquet ",
+            "key": "scanTime",
+            "value": 1
+          },
+          {
+            "node": "Scan parquet ",
+            "key": "metadataTime",
+            "value": 0
+          },
+          {
+            "node": "Scan parquet ",
+            "key": "filesSize",
+            "value": 5950
+          },
+          {
+            "node": "Scan parquet ",
+            "key": "numOutputRows",
+            "value": 266
+          }
+        ]
+      },
+      "merge": {
+        "plan": "*(10) HashAggregate(keys=[pickup_date#13, pu_borough#1315, do_borough#1319], functions=[count(1), sum(total_amount#10)], output=[pickup_date#13, pu_borough#1315, do_borough#1319, record_count#1414L, charge_total#1416])\n+- Exchange hashpartitioning(pickup_date#13, pu_borough#1315, do_borough#1319, 4), ENSURE_REQUIREMENTS, [plan_id=2203]\n   +- *(9) HashAggregate(keys=[pickup_date#13, pu_borough#1315, do_borough#1319], functions=[partial_count(1), partial_sum(total_amount#10)], output=[pickup_date#13, pu_borough#1315, do_borough#1319, count#1425L, sum#1426, isEmpty#1427])\n      +- *(9) Project [total_amount#10, pickup_date#13, pu_borough#1315, do_borough#1319]\n         +- *(9) SortMergeJoin [do_zone_key#6], [do_key#1318], Inner\n            :- *(6) Sort [do_zone_key#6 ASC NULLS FIRST], false, 0\n            :  +- Exchange hashpartitioning(do_zone_key#6, 4), ENSURE_REQUIREMENTS, [plan_id=2126]\n            :     +- *(5) Project [do_zone_key#6, total_amount#10, pickup_date#13, pu_borough#1315]\n            :        +- *(5) SortMergeJoin [pu_zone_key#5], [pu_key#1314], Inner\n            :           :- *(2) Sort [pu_zone_key#5 ASC NULLS FIRST], false, 0\n            :           :  +- Exchange hashpartitioning(pu_zone_key#5, 4), ENSURE_REQUIREMENTS, [plan_id=2108]\n            :           :     +- *(1) Filter (isnotnull(pu_zone_key#5) AND isnotnull(do_zone_key#6))\n            :           :        +- *(1) ColumnarToRow\n            :           :           +- FileScan parquet [pu_zone_key#5,do_zone_key#6,total_amount#10,pickup_date#13] Batched: true, DataFilters: [isnotnull(pu_zone_key#5), isnotnull(do_zone_key#6)], Format: Parquet, Location: InMemoryFileIndex(1 paths)[file:/opt/airflow/data/runs/2024-01/df6324a68b5743e3b7f67bb59e7e8a0e/a..., PartitionFilters: [], PushedFilters: [IsNotNull(pu_zone_key), IsNotNull(do_zone_key)], ReadSchema: struct<pu_zone_key:int,do_zone_key:int,total_amount:decimal(18,2)>\n            :           +- *(4) Sort [pu_key#1314 ASC NULLS FIRST], false, 0\n            :              +- Exchange hashpartitioning(pu_key#1314, 4), ENSURE_REQUIREMENTS, [plan_id=2118]\n            :                 +- *(3) Project [zone_key#28 AS pu_key#1314, borough#29 AS pu_borough#1315]\n            :                    +- *(3) Filter isnotnull(zone_key#28)\n            :                       +- *(3) ColumnarToRow\n            :                          +- FileScan parquet [zone_key#28,borough#29] Batched: true, DataFilters: [isnotnull(zone_key#28)], Format: Parquet, Location: InMemoryFileIndex(1 paths)[file:/opt/airflow/data/runs/2024-01/df6324a68b5743e3b7f67bb59e7e8a0e/z..., PartitionFilters: [], PushedFilters: [IsNotNull(zone_key)], ReadSchema: struct<zone_key:int,borough:string>\n            +- *(8) Sort [do_key#1318 ASC NULLS FIRST], false, 0\n               +- ReusedExchange [do_key#1318, do_borough#1319], Exchange hashpartitioning(pu_key#1314, 4), ENSURE_REQUIREMENTS, [plan_id=2118]\n",
+        "operator_metrics": [
+          {
+            "node": "WholeStageCodegen (10)",
+            "key": "pipelineTime",
+            "value": 4
+          },
+          {
+            "node": "HashAggregate",
+            "key": "spillSize",
+            "value": 0
+          },
+          {
+            "node": "HashAggregate",
+            "key": "aggTime",
+            "value": 0
+          },
+          {
+            "node": "HashAggregate",
+            "key": "peakMemory",
+            "value": 135266240
+          },
+          {
+            "node": "HashAggregate",
+            "key": "numOutputRows",
+            "value": 1301
+          },
+          {
+            "node": "HashAggregate",
+            "key": "numTasksFallBacked",
+            "value": 0
+          },
+          {
+            "node": "HashAggregate",
+            "key": "avgHashProbe",
+            "value": 40
+          },
+          {
+            "node": "Exchange",
+            "key": "shuffleRecordsWritten",
+            "value": 3264
+          },
+          {
+            "node": "Exchange",
+            "key": "localMergedChunksFetched",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "shuffleWriteTime",
+            "value": 1871604
+          },
+          {
+            "node": "Exchange",
+            "key": "remoteMergedBytesRead",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "localMergedBlocksFetched",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "corruptMergedBlockChunks",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "remoteMergedReqsDuration",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "remoteMergedBlocksFetched",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "recordsRead",
+            "value": 3264
+          },
+          {
+            "node": "Exchange",
+            "key": "localBytesRead",
+            "value": 91943
+          },
+          {
+            "node": "Exchange",
+            "key": "fetchWaitTime",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "remoteBytesRead",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "mergedFetchFallbackCount",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "localBlocksFetched",
+            "value": 16
+          },
+          {
+            "node": "Exchange",
+            "key": "remoteMergedChunksFetched",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "remoteBlocksFetched",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "dataSize",
+            "value": 301056
+          },
+          {
+            "node": "Exchange",
+            "key": "localMergedBytesRead",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "numPartitions",
+            "value": 4
+          },
+          {
+            "node": "Exchange",
+            "key": "remoteReqsDuration",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "remoteBytesReadToDisk",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "shuffleBytesWritten",
+            "value": 91943
+          },
+          {
+            "node": "WholeStageCodegen (9)",
+            "key": "pipelineTime",
+            "value": 918
+          },
+          {
+            "node": "HashAggregate",
+            "key": "spillSize",
+            "value": 0
+          },
+          {
+            "node": "HashAggregate",
+            "key": "aggTime",
+            "value": 912
+          },
+          {
+            "node": "HashAggregate",
+            "key": "peakMemory",
+            "value": 135266240
+          },
+          {
+            "node": "HashAggregate",
+            "key": "numOutputRows",
+            "value": 3264
+          },
+          {
+            "node": "HashAggregate",
+            "key": "numTasksFallBacked",
+            "value": 0
+          },
+          {
+            "node": "HashAggregate",
+            "key": "avgHashProbe",
+            "value": 40
+          },
+          {
+            "node": "SortMergeJoin",
+            "key": "numOutputRows",
+            "value": 2928237
+          },
+          {
+            "node": "SortMergeJoin",
+            "key": "spillSize",
+            "value": 0
+          },
+          {
+            "node": "WholeStageCodegen (6)",
+            "key": "pipelineTime",
+            "value": 919
+          },
+          {
+            "node": "Sort",
+            "key": "sortTime",
+            "value": 24
+          },
+          {
+            "node": "Sort",
+            "key": "peakMemory",
+            "value": 352321424
+          },
+          {
+            "node": "Sort",
+            "key": "spillSize",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "shuffleRecordsWritten",
+            "value": 2928237
+          },
+          {
+            "node": "Exchange",
+            "key": "localMergedChunksFetched",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "shuffleWriteTime",
+            "value": 28137324
+          },
+          {
+            "node": "Exchange",
+            "key": "remoteMergedBytesRead",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "localMergedBlocksFetched",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "corruptMergedBlockChunks",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "remoteMergedReqsDuration",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "remoteMergedBlocksFetched",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "recordsRead",
+            "value": 2928237
+          },
+          {
+            "node": "Exchange",
+            "key": "localBytesRead",
+            "value": 23531197
+          },
+          {
+            "node": "Exchange",
+            "key": "fetchWaitTime",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "remoteBytesRead",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "mergedFetchFallbackCount",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "localBlocksFetched",
+            "value": 16
+          },
+          {
+            "node": "Exchange",
+            "key": "remoteMergedChunksFetched",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "remoteBlocksFetched",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "dataSize",
+            "value": 161497808
+          },
+          {
+            "node": "Exchange",
+            "key": "localMergedBytesRead",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "numPartitions",
+            "value": 4
+          },
+          {
+            "node": "Exchange",
+            "key": "remoteReqsDuration",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "remoteBytesReadToDisk",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "shuffleBytesWritten",
+            "value": 23531197
+          },
+          {
+            "node": "WholeStageCodegen (5)",
+            "key": "pipelineTime",
+            "value": 1124
+          },
+          {
+            "node": "SortMergeJoin",
+            "key": "numOutputRows",
+            "value": 2928237
+          },
+          {
+            "node": "SortMergeJoin",
+            "key": "spillSize",
+            "value": 0
+          },
+          {
+            "node": "WholeStageCodegen (2)",
+            "key": "pipelineTime",
+            "value": 1130
+          },
+          {
+            "node": "Sort",
+            "key": "sortTime",
+            "value": 21
+          },
+          {
+            "node": "Sort",
+            "key": "peakMemory",
+            "value": 318767008
+          },
+          {
+            "node": "Sort",
+            "key": "spillSize",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "shuffleRecordsWritten",
+            "value": 2928237
+          },
+          {
+            "node": "Exchange",
+            "key": "localMergedChunksFetched",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "shuffleWriteTime",
+            "value": 40333845
+          },
+          {
+            "node": "Exchange",
+            "key": "remoteMergedBytesRead",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "localMergedBlocksFetched",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "corruptMergedBlockChunks",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "remoteMergedReqsDuration",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "remoteMergedBlocksFetched",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "recordsRead",
+            "value": 2928237
+          },
+          {
+            "node": "Exchange",
+            "key": "localBytesRead",
+            "value": 31293282
+          },
+          {
+            "node": "Exchange",
+            "key": "fetchWaitTime",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "remoteBytesRead",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "mergedFetchFallbackCount",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "localBlocksFetched",
+            "value": 12
+          },
+          {
+            "node": "Exchange",
+            "key": "remoteMergedChunksFetched",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "remoteBlocksFetched",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "dataSize",
+            "value": 117129480
+          },
+          {
+            "node": "Exchange",
+            "key": "localMergedBytesRead",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "numPartitions",
+            "value": 4
+          },
+          {
+            "node": "Exchange",
+            "key": "remoteReqsDuration",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "remoteBytesReadToDisk",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "shuffleBytesWritten",
+            "value": 31293282
+          },
+          {
+            "node": "WholeStageCodegen (1)",
+            "key": "pipelineTime",
+            "value": 517
+          },
+          {
+            "node": "Filter",
+            "key": "numOutputRows",
+            "value": 2928237
+          },
+          {
+            "node": "ColumnarToRow",
+            "key": "numOutputRows",
+            "value": 2928237
+          },
+          {
+            "node": "ColumnarToRow",
+            "key": "numInputBatches",
+            "value": 752
+          },
+          {
+            "node": "Scan parquet ",
+            "key": "numFiles",
+            "value": 62
+          },
+          {
+            "node": "Scan parquet ",
+            "key": "scanTime",
+            "value": 28
+          },
+          {
+            "node": "Scan parquet ",
+            "key": "pruningTime",
+            "value": 0
+          },
+          {
+            "node": "Scan parquet ",
+            "key": "metadataTime",
+            "value": 0
+          },
+          {
+            "node": "Scan parquet ",
+            "key": "filesSize",
+            "value": 62324122
+          },
+          {
+            "node": "Scan parquet ",
+            "key": "numOutputRows",
+            "value": 2928237
+          },
+          {
+            "node": "Scan parquet ",
+            "key": "numPartitions",
+            "value": 31
+          },
+          {
+            "node": "WholeStageCodegen (4)",
+            "key": "pipelineTime",
+            "value": 1121
+          },
+          {
+            "node": "Sort",
+            "key": "sortTime",
+            "value": 0
+          },
+          {
+            "node": "Sort",
+            "key": "peakMemory",
+            "value": 134479808
+          },
+          {
+            "node": "Sort",
+            "key": "spillSize",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "shuffleRecordsWritten",
+            "value": 266
+          },
+          {
+            "node": "Exchange",
+            "key": "localMergedChunksFetched",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "shuffleWriteTime",
+            "value": 405891
+          },
+          {
+            "node": "Exchange",
+            "key": "remoteMergedBytesRead",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "localMergedBlocksFetched",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "corruptMergedBlockChunks",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "remoteMergedReqsDuration",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "remoteMergedBlocksFetched",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "recordsRead",
+            "value": 532
+          },
+          {
+            "node": "Exchange",
+            "key": "localBytesRead",
+            "value": 5832
+          },
+          {
+            "node": "Exchange",
+            "key": "fetchWaitTime",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "remoteBytesRead",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "mergedFetchFallbackCount",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "localBlocksFetched",
+            "value": 8
+          },
+          {
+            "node": "Exchange",
+            "key": "remoteMergedChunksFetched",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "remoteBlocksFetched",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "dataSize",
+            "value": 9224
+          },
+          {
+            "node": "Exchange",
+            "key": "localMergedBytesRead",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "numPartitions",
+            "value": 4
+          },
+          {
+            "node": "Exchange",
+            "key": "remoteReqsDuration",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "remoteBytesReadToDisk",
+            "value": 0
+          },
+          {
+            "node": "Exchange",
+            "key": "shuffleBytesWritten",
+            "value": 2916
+          },
+          {
+            "node": "WholeStageCodegen (3)",
+            "key": "pipelineTime",
+            "value": 2
+          },
+          {
+            "node": "Filter",
+            "key": "numOutputRows",
+            "value": 266
+          },
+          {
+            "node": "ColumnarToRow",
+            "key": "numOutputRows",
+            "value": 266
+          },
+          {
+            "node": "ColumnarToRow",
+            "key": "numInputBatches",
+            "value": 1
+          },
+          {
+            "node": "Scan parquet ",
+            "key": "numFiles",
+            "value": 1
+          },
+          {
+            "node": "Scan parquet ",
+            "key": "scanTime",
+            "value": 1
+          },
+          {
+            "node": "Scan parquet ",
+            "key": "metadataTime",
+            "value": 0
+          },
+          {
+            "node": "Scan parquet ",
+            "key": "filesSize",
+            "value": 5950
+          },
+          {
+            "node": "Scan parquet ",
+            "key": "numOutputRows",
+            "value": 266
+          },
+          {
+            "node": "WholeStageCodegen (8)",
+            "key": "pipelineTime",
+            "value": 911
+          },
+          {
+            "node": "Sort",
+            "key": "sortTime",
+            "value": 0
+          },
+          {
+            "node": "Sort",
+            "key": "peakMemory",
+            "value": 134479808
+          },
+          {
+            "node": "Sort",
+            "key": "spillSize",
+            "value": 0
+          }
+        ]
+      }
+    },
+    "interpretation": "Controlled single-machine experiment; no speedup or distributed claim assumed"
+  }
+}

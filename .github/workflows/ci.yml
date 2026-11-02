@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  synthetic-pipeline:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - name: Build the project image
+        run: docker compose build cli
+      - name: Run tests with real Spark
+        run: docker compose run --rm --no-deps --entrypoint python cli -m pytest -q
+      - name: Exercise the offline CLI
+        run: |
+          docker compose run --rm --no-deps --entrypoint bash cli -euc '
+            python -m taxi_warehouse fixtures --output /tmp/taxi-ci/fixtures
+            python -m taxi_warehouse run-month --month 2024-01 --data-root /tmp/taxi-ci/warehouse --source /tmp/taxi-ci/fixtures/yellow_tripdata_2024-01.parquet --zones /tmp/taxi-ci/fixtures/zones.csv
+            python -m taxi_warehouse check --month 2024-01 --data-root /tmp/taxi-ci/warehouse
+          '
