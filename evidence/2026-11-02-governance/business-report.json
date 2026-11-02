@@ -1,0 +1,670 @@
+{
+  "metric_note": "记录量指接纳的公开源记录；记录收费总额以美元计，不是企业净收入，不含未记录的现金小费。平均行程距离为总距离／总记录量，单位英里；日均记录量以有接纳记录的日期数为分母。",
+  "published_months": [
+    {
+      "source_month": "2024-01",
+      "run_id": "df6324a68b5743e3b7f67bb59e7e8a0e",
+      "published_at": "2026-09-09 07:38:15.405106+00:00"
+    },
+    {
+      "source_month": "2024-02",
+      "run_id": "2b25b78294694d71a63fbf93ccb90c6d",
+      "published_at": "2026-09-09 07:40:32.701995+00:00"
+    },
+    {
+      "source_month": "2024-03",
+      "run_id": "4616aab10ec9422db56f14dd3dd45e3f",
+      "published_at": "2026-09-09 07:39:44.625669+00:00"
+    }
+  ],
+  "reports": {
+    "daily_trends": [
+      {
+        "pickup_date": "2024-01-01",
+        "trip_record_count": 79779,
+        "recorded_charge_total_usd": "2474921.78",
+        "avg_trip_distance_miles": 4.4112188671204215
+      },
+      {
+        "pickup_date": "2024-01-02",
+        "trip_record_count": 74412,
+        "recorded_charge_total_usd": "2309010.03",
+        "avg_trip_distance_miles": 4.133507901951297
+      },
+      {
+        "pickup_date": "2024-01-03",
+        "trip_record_count": 81277,
+        "recorded_charge_total_usd": "2387038.91",
+        "avg_trip_distance_miles": 3.886708539931349
+      },
+      {
+        "pickup_date": "2024-01-04",
+        "trip_record_count": 101595,
+        "recorded_charge_total_usd": "2833224.72",
+        "avg_trip_distance_miles": 3.314217136670109
+      },
+      {
+        "pickup_date": "2024-01-05",
+        "trip_record_count": 101844,
+        "recorded_charge_total_usd": "2759529.54",
+        "avg_trip_distance_miles": 3.7638657161933935
+      },
+      {
+        "pickup_date": "2024-01-06",
+        "trip_record_count": 95864,
+        "recorded_charge_total_usd": "2465098.39",
+        "avg_trip_distance_miles": 3.1271056913961455
+      },
+      {
+        "pickup_date": "2024-01-07",
+        "trip_record_count": 66570,
+        "recorded_charge_total_usd": "1924968.27",
+        "avg_trip_distance_miles": 3.8816430824695836
+      },
+      {
+        "pickup_date": "2024-01-08",
+        "trip_record_count": 78966,
+        "recorded_charge_total_usd": "2242323.47",
+        "avg_trip_distance_miles": 3.5159321733404254
+      },
+      {
+        "pickup_date": "2024-01-09",
+        "trip_record_count": 92946,
+        "recorded_charge_total_usd": "2386754.83",
+        "avg_trip_distance_miles": 3.8450016138402976
+      },
+      {
+        "pickup_date": "2024-01-10",
+        "trip_record_count": 93964,
+        "recorded_charge_total_usd": "2574847.25",
+        "avg_trip_distance_miles": 3.3550271380528764
+      },
+      {
+        "pickup_date": "2024-01-11",
+        "trip_record_count": 103806,
+        "recorded_charge_total_usd": "2935401.83",
+        "avg_trip_distance_miles": 3.5946409648767887
+      },
+      {
+        "pickup_date": "2024-01-12",
+        "trip_record_count": 102439,
+        "recorded_charge_total_usd": "2891137.57",
+        "avg_trip_distance_miles": 4.246172746707793
+      },
+      {
+        "pickup_date": "2024-01-13",
+        "trip_record_count": 103434,
+        "recorded_charge_total_usd": "2680644.50",
+        "avg_trip_distance_miles": 3.7819069164878054
+      },
+      {
+        "pickup_date": "2024-01-14",
+        "trip_record_count": 93193,
+        "recorded_charge_total_usd": "2490307.45",
+        "avg_trip_distance_miles": 3.3141746697713366
+      },
+      {
+        "pickup_date": "2024-01-15",
+        "trip_record_count": 76117,
+        "recorded_charge_total_usd": "2187872.16",
+        "avg_trip_distance_miles": 3.735475123822536
+      },
+      {
+        "pickup_date": "2024-01-16",
+        "trip_record_count": 92055,
+        "recorded_charge_total_usd": "2659472.78",
+        "avg_trip_distance_miles": 3.7221395904622274
+      },
+      {
+        "pickup_date": "2024-01-17",
+        "trip_record_count": 109173,
+        "recorded_charge_total_usd": "3008618.56",
+        "avg_trip_distance_miles": 3.842115724583921
+      },
+      {
+        "pickup_date": "2024-01-18",
+        "trip_record_count": 109137,
+        "recorded_charge_total_usd": "2972198.67",
+        "avg_trip_distance_miles": 3.0171830818146033
+      },
+      {
+        "pickup_date": "2024-01-19",
+        "trip_record_count": 94761,
+        "recorded_charge_total_usd": "2506960.50",
+        "avg_trip_distance_miles": 3.015655702240373
+      },
+      {
+        "pickup_date": "2024-01-20",
+        "trip_record_count": 107456,
+        "recorded_charge_total_usd": "2630531.43",
+        "avg_trip_distance_miles": 3.5466931581298407
+      },
+      {
+        "pickup_date": "2024-01-21",
+        "trip_record_count": 83364,
+        "recorded_charge_total_usd": "2292668.06",
+        "avg_trip_distance_miles": 4.83842689890121
+      },
+      {
+        "pickup_date": "2024-01-22",
+        "trip_record_count": 84540,
+        "recorded_charge_total_usd": "2387983.93",
+        "avg_trip_distance_miles": 3.4006910338301366
+      },
+      {
+        "pickup_date": "2024-01-23",
+        "trip_record_count": 98750,
+        "recorded_charge_total_usd": "2662674.83",
+        "avg_trip_distance_miles": 2.9759164556962014
+      },
+      {
+        "pickup_date": "2024-01-24",
+        "trip_record_count": 103941,
+        "recorded_charge_total_usd": "2816046.95",
+        "avg_trip_distance_miles": 3.524336883424248
+      },
+      {
+        "pickup_date": "2024-01-25",
+        "trip_record_count": 109111,
+        "recorded_charge_total_usd": "3032883.91",
+        "avg_trip_distance_miles": 3.9896388998359447
+      },
+      {
+        "pickup_date": "2024-01-26",
+        "trip_record_count": 104497,
+        "recorded_charge_total_usd": "2844372.01",
+        "avg_trip_distance_miles": 3.3867140683464605
+      },
+      {
+        "pickup_date": "2024-01-27",
+        "trip_record_count": 109090,
+        "recorded_charge_total_usd": "2742815.43",
+        "avg_trip_distance_miles": 2.8289589329911045
+      },
+      {
+        "pickup_date": "2024-01-28",
+        "trip_record_count": 91629,
+        "recorded_charge_total_usd": "2462548.25",
+        "avg_trip_distance_miles": 3.334248218358818
+      },
+      {
+        "pickup_date": "2024-01-29",
+        "trip_record_count": 83497,
+        "recorded_charge_total_usd": "2364177.74",
+        "avg_trip_distance_miles": 3.4010620740864925
+      },
+      {
+        "pickup_date": "2024-01-30",
+        "trip_record_count": 100080,
+        "recorded_charge_total_usd": "2667964.20",
+        "avg_trip_distance_miles": 6.060864708233414
+      },
+      {
+        "pickup_date": "2024-01-31",
+        "trip_record_count": 100950,
+        "recorded_charge_total_usd": "2712280.00",
+        "avg_trip_distance_miles": 3.1613401684001956
+      },
+      {
+        "pickup_date": "2024-02-01",
+        "trip_record_count": 108709,
+        "recorded_charge_total_usd": "3006958.52",
+        "avg_trip_distance_miles": 3.5441525540663594
+      },
+      {
+        "pickup_date": "2024-02-02",
+        "trip_record_count": 104196,
+        "recorded_charge_total_usd": "2793136.39",
+        "avg_trip_distance_miles": 2.9676690084072312
+      },
+      {
+        "pickup_date": "2024-02-03",
+        "trip_record_count": 109260,
+        "recorded_charge_total_usd": "2698154.15",
+        "avg_trip_distance_miles": 2.76306049789493
+      },
+      {
+        "pickup_date": "2024-02-04",
+        "trip_record_count": 86919,
+        "recorded_charge_total_usd": "2405116.66",
+        "avg_trip_distance_miles": 3.478110424648234
+      },
+      {
+        "pickup_date": "2024-02-05",
+        "trip_record_count": 87337,
+        "recorded_charge_total_usd": "2440380.27",
+        "avg_trip_distance_miles": 3.734011014804726
+      },
+      {
+        "pickup_date": "2024-02-06",
+        "trip_record_count": 100948,
+        "recorded_charge_total_usd": "2731187.49",
+        "avg_trip_distance_miles": 3.753658814439114
+      },
+      {
+        "pickup_date": "2024-02-07",
+        "trip_record_count": 101769,
+        "recorded_charge_total_usd": "2857154.76",
+        "avg_trip_distance_miles": 5.210206742721259
+      },
+      {
+        "pickup_date": "2024-02-08",
+        "trip_record_count": 112758,
+        "recorded_charge_total_usd": "3164138.11",
+        "avg_trip_distance_miles": 4.149759839656605
+      },
+      {
+        "pickup_date": "2024-02-09",
+        "trip_record_count": 109164,
+        "recorded_charge_total_usd": "3018926.26",
+        "avg_trip_distance_miles": 6.248165695650579
+      },
+      {
+        "pickup_date": "2024-02-10",
+        "trip_record_count": 110218,
+        "recorded_charge_total_usd": "2804006.79",
+        "avg_trip_distance_miles": 4.983323957974196
+      },
+      {
+        "pickup_date": "2024-02-11",
+        "trip_record_count": 95367,
+        "recorded_charge_total_usd": "2607832.15",
+        "avg_trip_distance_miles": 4.490480354839725
+      },
+      {
+        "pickup_date": "2024-02-12",
+        "trip_record_count": 90903,
+        "recorded_charge_total_usd": "2551715.06",
+        "avg_trip_distance_miles": 3.3573535526880276
+      },
+      {
+        "pickup_date": "2024-02-13",
+        "trip_record_count": 68144,
+        "recorded_charge_total_usd": "1734335.45",
+        "avg_trip_distance_miles": 3.056172957266965
+      },
+      {
+        "pickup_date": "2024-02-14",
+        "trip_record_count": 120429,
+        "recorded_charge_total_usd": "3212755.45",
+        "avg_trip_distance_miles": 4.739544461882105
+      },
+      {
+        "pickup_date": "2024-02-15",
+        "trip_record_count": 121616,
+        "recorded_charge_total_usd": "3286189.69",
+        "avg_trip_distance_miles": 2.9788439021181445
+      },
+      {
+        "pickup_date": "2024-02-16",
+        "trip_record_count": 104458,
+        "recorded_charge_total_usd": "2934028.02",
+        "avg_trip_distance_miles": 3.660561469681594
+      },
+      {
+        "pickup_date": "2024-02-17",
+        "trip_record_count": 104345,
+        "recorded_charge_total_usd": "2626797.32",
+        "avg_trip_distance_miles": 3.755368441228618
+      },
+      {
+        "pickup_date": "2024-02-18",
+        "trip_record_count": 92468,
+        "recorded_charge_total_usd": "2473803.31",
+        "avg_trip_distance_miles": 3.7205424579313937
+      },
+      {
+        "pickup_date": "2024-02-19",
+        "trip_record_count": 74978,
+        "recorded_charge_total_usd": "2221648.83",
+        "avg_trip_distance_miles": 3.9860941876283715
+      },
+      {
+        "pickup_date": "2024-02-20",
+        "trip_record_count": 95911,
+        "recorded_charge_total_usd": "2704082.86",
+        "avg_trip_distance_miles": 3.3023513465608767
+      },
+      {
+        "pickup_date": "2024-02-21",
+        "trip_record_count": 102271,
+        "recorded_charge_total_usd": "2784434.67",
+        "avg_trip_distance_miles": 3.5884504893860427
+      },
+      {
+        "pickup_date": "2024-02-22",
+        "trip_record_count": 114231,
+        "recorded_charge_total_usd": "3178769.10",
+        "avg_trip_distance_miles": 5.141004105715616
+      },
+      {
+        "pickup_date": "2024-02-23",
+        "trip_record_count": 101115,
+        "recorded_charge_total_usd": "2791983.57",
+        "avg_trip_distance_miles": 5.260816990555306
+      },
+      {
+        "pickup_date": "2024-02-24",
+        "trip_record_count": 116391,
+        "recorded_charge_total_usd": "2940820.72",
+        "avg_trip_distance_miles": 2.9198144186406174
+      },
+      {
+        "pickup_date": "2024-02-25",
+        "trip_record_count": 94536,
+        "recorded_charge_total_usd": "2622546.99",
+        "avg_trip_distance_miles": 3.6088197088939675
+      },
+      {
+        "pickup_date": "2024-02-26",
+        "trip_record_count": 85184,
+        "recorded_charge_total_usd": "2561637.17",
+        "avg_trip_distance_miles": 3.6687565740045125
+      },
+      {
+        "pickup_date": "2024-02-27",
+        "trip_record_count": 117328,
+        "recorded_charge_total_usd": "3151075.35",
+        "avg_trip_distance_miles": 3.1075040058638996
+      },
+      {
+        "pickup_date": "2024-02-28",
+        "trip_record_count": 111227,
+        "recorded_charge_total_usd": "3094504.48",
+        "avg_trip_distance_miles": 3.4690485223911445
+      },
+      {
+        "pickup_date": "2024-02-29",
+        "trip_record_count": 128450,
+        "recorded_charge_total_usd": "3574351.14",
+        "avg_trip_distance_miles": 3.3368388478006983
+      },
+      {
+        "pickup_date": "2024-03-01",
+        "trip_record_count": 116068,
+        "recorded_charge_total_usd": "3179792.84",
+        "avg_trip_distance_miles": 4.733150394596268
+      },
+      {
+        "pickup_date": "2024-03-02",
+        "trip_record_count": 120958,
+        "recorded_charge_total_usd": "3071613.33",
+        "avg_trip_distance_miles": 3.9355318374973165
+      },
+      {
+        "pickup_date": "2024-03-03",
+        "trip_record_count": 95685,
+        "recorded_charge_total_usd": "2728920.08",
+        "avg_trip_distance_miles": 3.6719016564769835
+      },
+      {
+        "pickup_date": "2024-03-04",
+        "trip_record_count": 92929,
+        "recorded_charge_total_usd": "2683003.21",
+        "avg_trip_distance_miles": 3.868799836434264
+      },
+      {
+        "pickup_date": "2024-03-05",
+        "trip_record_count": 111259,
+        "recorded_charge_total_usd": "3063630.95",
+        "avg_trip_distance_miles": 2.966073036788036
+      },
+      {
+        "pickup_date": "2024-03-06",
+        "trip_record_count": 131588,
+        "recorded_charge_total_usd": "3577689.06",
+        "avg_trip_distance_miles": 3.8948375231784027
+      },
+      {
+        "pickup_date": "2024-03-07",
+        "trip_record_count": 120792,
+        "recorded_charge_total_usd": "3377856.23",
+        "avg_trip_distance_miles": 4.631377409099941
+      },
+      {
+        "pickup_date": "2024-03-08",
+        "trip_record_count": 118061,
+        "recorded_charge_total_usd": "3271796.57",
+        "avg_trip_distance_miles": 3.1825463108054306
+      },
+      {
+        "pickup_date": "2024-03-09",
+        "trip_record_count": 138883,
+        "recorded_charge_total_usd": "3465027.72",
+        "avg_trip_distance_miles": 3.500990185983886
+      },
+      {
+        "pickup_date": "2024-03-10",
+        "trip_record_count": 103017,
+        "recorded_charge_total_usd": "2899875.50",
+        "avg_trip_distance_miles": 3.5835748468699338
+      },
+      {
+        "pickup_date": "2024-03-11",
+        "trip_record_count": 97051,
+        "recorded_charge_total_usd": "2804209.32",
+        "avg_trip_distance_miles": 3.5407311619663924
+      },
+      {
+        "pickup_date": "2024-03-12",
+        "trip_record_count": 110905,
+        "recorded_charge_total_usd": "3159270.98",
+        "avg_trip_distance_miles": 3.203656913574682
+      },
+      {
+        "pickup_date": "2024-03-13",
+        "trip_record_count": 118282,
+        "recorded_charge_total_usd": "3348079.14",
+        "avg_trip_distance_miles": 3.1940795725469675
+      },
+      {
+        "pickup_date": "2024-03-14",
+        "trip_record_count": 135535,
+        "recorded_charge_total_usd": "3869741.04",
+        "avg_trip_distance_miles": 3.977558785553546
+      },
+      {
+        "pickup_date": "2024-03-15",
+        "trip_record_count": 127082,
+        "recorded_charge_total_usd": "3552711.87",
+        "avg_trip_distance_miles": 3.985786578744432
+      },
+      {
+        "pickup_date": "2024-03-16",
+        "trip_record_count": 129563,
+        "recorded_charge_total_usd": "3436830.02",
+        "avg_trip_distance_miles": 5.0440171190849235
+      },
+      {
+        "pickup_date": "2024-03-17",
+        "trip_record_count": 101922,
+        "recorded_charge_total_usd": "3015823.48",
+        "avg_trip_distance_miles": 6.345109986067776
+      },
+      {
+        "pickup_date": "2024-03-18",
+        "trip_record_count": 93797,
+        "recorded_charge_total_usd": "2793826.80",
+        "avg_trip_distance_miles": 5.536237939379724
+      },
+      {
+        "pickup_date": "2024-03-19",
+        "trip_record_count": 110303,
+        "recorded_charge_total_usd": "3089875.00",
+        "avg_trip_distance_miles": 4.624102426951216
+      },
+      {
+        "pickup_date": "2024-03-20",
+        "trip_record_count": 117577,
+        "recorded_charge_total_usd": "3288921.41",
+        "avg_trip_distance_miles": 3.835428867890828
+      },
+      {
+        "pickup_date": "2024-03-21",
+        "trip_record_count": 129260,
+        "recorded_charge_total_usd": "3611792.15",
+        "avg_trip_distance_miles": 4.340201531796377
+      },
+      {
+        "pickup_date": "2024-03-22",
+        "trip_record_count": 115266,
+        "recorded_charge_total_usd": "3238520.78",
+        "avg_trip_distance_miles": 6.709800721808678
+      },
+      {
+        "pickup_date": "2024-03-23",
+        "trip_record_count": 120415,
+        "recorded_charge_total_usd": "3054470.97",
+        "avg_trip_distance_miles": 5.543630693850432
+      },
+      {
+        "pickup_date": "2024-03-24",
+        "trip_record_count": 100433,
+        "recorded_charge_total_usd": "2922564.35",
+        "avg_trip_distance_miles": 4.44360419384067
+      },
+      {
+        "pickup_date": "2024-03-25",
+        "trip_record_count": 92050,
+        "recorded_charge_total_usd": "2722674.29",
+        "avg_trip_distance_miles": 8.163620749592619
+      },
+      {
+        "pickup_date": "2024-03-26",
+        "trip_record_count": 111300,
+        "recorded_charge_total_usd": "3109334.66",
+        "avg_trip_distance_miles": 6.06908301886793
+      },
+      {
+        "pickup_date": "2024-03-27",
+        "trip_record_count": 119783,
+        "recorded_charge_total_usd": "3365180.32",
+        "avg_trip_distance_miles": 5.3943348388335615
+      },
+      {
+        "pickup_date": "2024-03-28",
+        "trip_record_count": 131156,
+        "recorded_charge_total_usd": "3762521.89",
+        "avg_trip_distance_miles": 4.053548903595715
+      },
+      {
+        "pickup_date": "2024-03-29",
+        "trip_record_count": 118201,
+        "recorded_charge_total_usd": "3242232.60",
+        "avg_trip_distance_miles": 6.230991531374523
+      },
+      {
+        "pickup_date": "2024-03-30",
+        "trip_record_count": 111037,
+        "recorded_charge_total_usd": "2865478.25",
+        "avg_trip_distance_miles": 4.955007970316195
+      },
+      {
+        "pickup_date": "2024-03-31",
+        "trip_record_count": 97012,
+        "recorded_charge_total_usd": "2732022.10",
+        "avg_trip_distance_miles": 4.366618562652035
+      }
+    ],
+    "top_pickup_zones": [
+      {
+        "pu_zone_key": 161,
+        "borough": "Manhattan",
+        "zone": "Midtown Center",
+        "trip_record_count": 448438,
+        "recorded_charge_total_usd": "10928428.27",
+        "avg_trip_distance_miles": 2.535105142739912
+      },
+      {
+        "pu_zone_key": 237,
+        "borough": "Manhattan",
+        "zone": "Upper East Side South",
+        "trip_record_count": 434661,
+        "recorded_charge_total_usd": "8769264.66",
+        "avg_trip_distance_miles": 1.8551972226631785
+      },
+      {
+        "pu_zone_key": 132,
+        "borough": "Queens",
+        "zone": "JFK Airport",
+        "trip_record_count": 416288,
+        "recorded_charge_total_usd": "33869196.94",
+        "avg_trip_distance_miles": 15.745040140479677
+      },
+      {
+        "pu_zone_key": 236,
+        "borough": "Manhattan",
+        "zone": "Upper East Side North",
+        "trip_record_count": 413063,
+        "recorded_charge_total_usd": "8535093.77",
+        "avg_trip_distance_miles": 2.4423256500824313
+      },
+      {
+        "pu_zone_key": 162,
+        "borough": "Manhattan",
+        "zone": "Midtown East",
+        "trip_record_count": 332602,
+        "recorded_charge_total_usd": "7907079.16",
+        "avg_trip_distance_miles": 2.570678919549492
+      },
+      {
+        "pu_zone_key": 230,
+        "borough": "Manhattan",
+        "zone": "Times Sq/Theatre District",
+        "trip_record_count": 326177,
+        "recorded_charge_total_usd": "8958840.88",
+        "avg_trip_distance_miles": 3.0771389460323686
+      },
+      {
+        "pu_zone_key": 186,
+        "borough": "Manhattan",
+        "zone": "Penn Station/Madison Sq West",
+        "trip_record_count": 315668,
+        "recorded_charge_total_usd": "7775466.16",
+        "avg_trip_distance_miles": 2.2699573919434344
+      },
+      {
+        "pu_zone_key": 142,
+        "borough": "Manhattan",
+        "zone": "Lincoln Square East",
+        "trip_record_count": 312835,
+        "recorded_charge_total_usd": "6753966.99",
+        "avg_trip_distance_miles": 2.2774108395799706
+      },
+      {
+        "pu_zone_key": 138,
+        "borough": "Queens",
+        "zone": "LaGuardia Airport",
+        "trip_record_count": 281202,
+        "recorded_charge_total_usd": "18821889.97",
+        "avg_trip_distance_miles": 9.63168394961629
+      },
+      {
+        "pu_zone_key": 239,
+        "borough": "Manhattan",
+        "zone": "Upper West Side South",
+        "trip_record_count": 279206,
+        "recorded_charge_total_usd": "6013684.85",
+        "avg_trip_distance_miles": 3.3156862316712394
+      }
+    ],
+    "weekday_weekend": [
+      {
+        "day_type": "weekday",
+        "observed_days": 65,
+        "trip_record_count": 6757008,
+        "recorded_charge_total_usd": "188523749.92",
+        "avg_trip_distance_miles": 4.0741188910831605,
+        "avg_daily_record_count": 103953.96923076923
+      },
+      {
+        "day_type": "weekend",
+        "observed_days": 26,
+        "trip_record_count": 2679029,
+        "recorded_charge_total_usd": "71061285.67",
+        "avg_trip_distance_miles": 4.003696260846742,
+        "avg_daily_record_count": 103039.57692307692
+      }
+    ]
+  }
+}

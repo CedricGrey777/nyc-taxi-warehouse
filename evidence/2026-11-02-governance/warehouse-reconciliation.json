@@ -1,0 +1,29 @@
+{
+  "verification": "2026-11-02 grouped reconciliation",
+  "months": [
+    {
+      "month": "2024-01",
+      "record_count": 2928237,
+      "recorded_charge_total": "80307277.95",
+      "passed": true,
+      "run_id": "df6324a68b5743e3b7f67bb59e7e8a0e",
+      "quarantine_count": 36387
+    },
+    {
+      "month": "2024-02",
+      "record_count": 2970630,
+      "recorded_charge_total": "80972470.73",
+      "passed": true,
+      "run_id": "2b25b78294694d71a63fbf93ccb90c6d",
+      "quarantine_count": 36896
+    },
+    {
+      "month": "2024-03",
+      "record_count": 3537170,
+      "recorded_charge_total": "98305286.91",
+      "passed": true,
+      "run_id": "4616aab10ec9422db56f14dd3dd45e3f",
+      "quarantine_count": 45458
+    }
+  ]
+}

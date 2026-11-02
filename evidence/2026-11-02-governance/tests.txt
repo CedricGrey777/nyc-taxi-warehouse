@@ -1,0 +1,4 @@
+ Container nyc-taxi-warehouse-cli-run-efd5a7d248bf Creating
+ Container nyc-taxi-warehouse-cli-run-efd5a7d248bf Created
+...............................                                          [100%]
+31 passed in 13.89s

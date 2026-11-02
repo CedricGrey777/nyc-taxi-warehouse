@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 import statistics
 import time
+import uuid
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -24,6 +25,14 @@ def _plan_metrics(plan) -> list[dict]:
     while children.hasNext():
         values.extend(_plan_metrics(children.next()))
     return values
+
+
+def _write_benchmark_report(data_root: Path, report: dict) -> dict:
+    experiment_id = uuid.uuid4().hex
+    result = {**report, "experiment_id": experiment_id}
+    filename = f"{report['month']}-{report['run_id']}-{experiment_id}.json"
+    dump_json(data_root / "benchmarks" / filename, result)
+    return result
 
 
 def benchmark_month(data_root: str | Path, month: str, repetitions: int = 5) -> dict:
@@ -97,7 +106,6 @@ def benchmark_month(data_root: str | Path, month: str, repetitions: int = 5) -> 
             "outputs_equal": True, "output_groups": len(expected or []), "strategies": details,
             "interpretation": "Controlled single-machine experiment; no speedup or distributed claim assumed",
         }
-        dump_json(root / "benchmarks" / f"{month}-{run_id}.json", report)
-        return report
+        return _write_benchmark_report(root, report)
     finally:
         spark.stop()

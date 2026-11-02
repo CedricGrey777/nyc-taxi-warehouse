@@ -11,6 +11,10 @@ import duckdb
 from .pipeline import CommitAcknowledgementLost, validate_month
 from .transform import FACT_COLUMNS
 
+# Distances are floating-point miles; counts and monetary amounts remain exact.
+DISTANCE_ABS_TOLERANCE = 1e-8
+DISTANCE_REL_TOLERANCE = 1e-9
+
 DDL = """
 CREATE TABLE IF NOT EXISTS dim_zone (
     zone_key INTEGER PRIMARY KEY, borough VARCHAR, zone VARCHAR, service_zone VARCHAR
@@ -64,6 +68,40 @@ def _assert_month(connection, month: str, expected_count: int, expected_amount: 
     ).fetchone()
     if fact != mart or fact != (expected_count, Decimal(expected_amount)):
         raise ValueError(f"Fact/mart/quality reconciliation failed for {month}")
+    invalid_distance = connection.execute(
+        """SELECT
+        (SELECT count(*) FROM fact_trip_record
+         WHERE source_month = ? AND (trip_distance IS NULL OR NOT isfinite(trip_distance))) +
+        (SELECT count(*) FROM mart_daily_pickup_zone
+         WHERE source_month = ? AND (distance_total_miles IS NULL OR NOT isfinite(distance_total_miles)))""",
+        [month, month],
+    ).fetchone()[0]
+    if invalid_distance:
+        raise ValueError(f"Fact/mart contains a missing or non-finite distance for {month}")
+    mismatched_groups = connection.execute(
+        """WITH fact_groups AS (
+            SELECT pickup_date, pu_zone_key, count(*) AS record_count,
+                   sum(total_amount) AS charge_total, sum(trip_distance) AS distance_total
+            FROM fact_trip_record WHERE source_month = ?
+            GROUP BY pickup_date, pu_zone_key
+        ), mart_groups AS (
+            SELECT pickup_date, pu_zone_key, trip_record_count AS record_count,
+                   recorded_charge_total AS charge_total, distance_total_miles AS distance_total
+            FROM mart_daily_pickup_zone WHERE source_month = ?
+        )
+        SELECT count(*) FROM fact_groups f FULL OUTER JOIN mart_groups m
+          ON f.pickup_date = m.pickup_date AND f.pu_zone_key = m.pu_zone_key
+        WHERE f.record_count IS NULL OR m.record_count IS NULL
+           OR f.record_count <> m.record_count
+           OR f.charge_total IS DISTINCT FROM m.charge_total
+           OR f.distance_total IS NULL OR m.distance_total IS NULL
+           OR NOT isfinite(f.distance_total) OR NOT isfinite(m.distance_total)
+           OR abs(f.distance_total - m.distance_total) >
+              ? + ? * greatest(abs(f.distance_total), abs(m.distance_total))""",
+        [month, month, DISTANCE_ABS_TOLERANCE, DISTANCE_REL_TOLERANCE],
+    ).fetchone()[0]
+    if mismatched_groups:
+        raise ValueError(f"Daily pickup-zone reconciliation failed for {month}: {mismatched_groups} groups")
     orphaned = connection.execute(
         """SELECT count(*) FROM fact_trip_record f
         LEFT JOIN dim_zone p ON f.pu_zone_key = p.zone_key

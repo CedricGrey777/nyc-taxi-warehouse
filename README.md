@@ -4,13 +4,13 @@
 
 一个适合 16 GB Windows + Docker Desktop/WSL2 开发机的离线数据工程项目。固定处理 NYC Yellow Taxi 2024 年 Q1 数据，展示月度处理、事实/维度建模、质量隔离、历史补跑、事务发布和受控 Spark Join 实验。不是实时系统，不依赖 GPU、云集群、MinIO 或业务 API。
 
-项目入口：[源码](https://github.com/CedricGrey777/nyc-taxi-warehouse) · [验证记录](VALIDATION.md) · [当前证据](evidence/2026-11-02/warehouse-verification.json) · [CI](https://github.com/CedricGrey777/nyc-taxi-warehouse/actions/workflows/ci.yml) · [MIT 许可证](LICENSE)
+项目入口：[源码](https://github.com/CedricGrey777/nyc-taxi-warehouse) · [验证记录](VALIDATION.md) · [当前对账证据](evidence/2026-11-02-governance/warehouse-reconciliation.json) · [运营报告](evidence/2026-11-02-governance/business-report.md) · [CI](https://github.com/CedricGrey777/nyc-taxi-warehouse/actions/workflows/ci.yml) · [MIT 许可证](LICENSE)
 
 ## 历史实测与当前验证
 
 [2026-09-09 实测记录](VALIDATION.md) 记载 Q1 原始记录 **9,554,778** 条，接纳 **9,436,037** 条，隔离／业务排除 **118,741** 条；当次完整测试为 **9 passed**。固定一月 2,928,237 条接纳记录的 Join 实验中，Sort-Merge / Broadcast 的五次耗时中位数分别为 **1.649809 / 0.451515 秒**，两种策略的 1,301 个结果分组一致。
 
-2026-11-02 已只读复核三个月的事实与指标，结果与上述历史规模一致，并导出 [质量汇总与历史 Join 原始证据](evidence/2026-11-02/warehouse-verification.json)。本轮聚焦合同测试 **5 passed in 0.02s**、完整测试 **9 passed in 13.20s**，合成 CLI 验证 **9＝3＋6、接纳金额 25.00 美元**，`pip check` 无依赖冲突；[验证记录](VALIDATION.md) 提供日志和实测命令。Join 耗时仍为 2026-09-09 的测量，本轮未重跑性能实验。
+2026-11-02 已补齐日／地区粒度的记录数、金额、距离对账，并只读复核真实三个月发布：[全部通过](evidence/2026-11-02-governance/warehouse-reconciliation.json)，规模和发布 run ID 与历史结果一致。新增能力聚焦测试 **22 passed in 1.90s**、当前完整测试 **31 passed in 13.89s**；[验证记录](VALIDATION.md) 提供日志和复现命令，同时保留此前 9 项测试、合成 CLI 和依赖检查结果。Join 耗时仍为 2026-09-09 的测量，[原始实验与质量证据](evidence/2026-11-02/warehouse-verification.json) 已归档，本轮未重跑性能实验。
 
 [GitHub Actions](https://github.com/CedricGrey777/nyc-taxi-warehouse/actions/workflows/ci.yml) 展示对应提交的合成数据测试结果；它不重测 Q1 处理规模或历史性能数字。
 
@@ -27,6 +27,25 @@
 事实粒度是一条公开源记录；相同字段的记录保留，只统计重复样式。幂等由目标月份替换实现，不能通过删除“疑似重复”修复重复导入。源文件 SHA-256 只识别输入快照，不生成业务行程 ID。
 
 固定 1/2/3 月可演示先发布 1 月和 3 月，再补 2 月；也覆盖 2 月 29 日。不跨 2025 新增费用字段。保留源时间的本地钟面语义，只用日期统计，不把无时区时间戳相减包装成经过 DST 修正的真实行程时长。
+
+### 查看已发布的运营指标
+
+三份独立 SQL 提供 [日趋势](sql/daily_trends.sql)、[上车地区 Top 10](sql/top_pickup_zones.sql) 和 [工作日／周末对比](sql/weekday_weekend.sql)。报告脚本只读打开已有 DuckDB，向标准输出导出汇总和来源运行标识；不读取或输出行级明细。真实 Q1 输出可直接查看 [运营报告](evidence/2026-11-02-governance/business-report.md) 或 [JSON 结果](evidence/2026-11-02-governance/business-report.json)。
+
+```powershell
+docker compose run --rm --no-deps --entrypoint python cli tools/report.py --data-root /opt/airflow/data --format markdown
+# 需要结构化结果时，将 --format 改为 json；合成演示使用 /opt/airflow/data/demo/warehouse。
+```
+
+所有距离均值都按 `SUM(distance_total_miles) / SUM(trip_record_count)` 重算；日均记录量以有接纳记录的日期数为分母。记录收费总额不是企业净收入。报告需在发布完成后执行。
+
+这份 Q1 报告支持以下观察：
+
+- 91 个日期中，2024-03-09 的接纳记录最多，为 **138,883** 条；2024-01-07 最少，为 **66,570** 条。
+- Midtown Center 的上车记录为 **448,438** 条，位列地区首位，占全部接纳记录的 **4.75%**。
+- 工作日共 65 天、日均 **103,953.97** 条；周末共 26 天、日均 **103,039.58** 条。按各自日期数归一后，工作日日均约高 **0.89%**。
+
+这些结果描述纳入分析的公开记录在时间和地区上的分布，不据此归因于真实需求、运力或经营收入变化。
 
 ## 结构和运行条件
 
@@ -132,7 +151,8 @@ docker compose run --rm cli run-month --month 2024-01 --source /opt/airflow/data
 - 业务排除：上车日期不在目标来源月、负金额/距离。保留源数据与排除原因，不把冲销记录武断地说成错误数据。
 - 零金额/距离保留；未知地区保留并映射 Unknown，不内关联丢行。
 - 每条隔离记录只有一个主原因，额外原因保存在 `all_reasons`，防止多问题行被重复计数。
-- 对账：原始数＝接纳数＋隔离数；统一分币口径的可解析金额＝接纳金额＋隔离金额；不可解析金额单独计数。事实/指标行数及收费合计再次核对。
+- 对账：原始数＝接纳数＋隔离数；统一分币口径的可解析金额＝接纳金额＋隔离金额；不可解析金额单独计数。发布及 `check` 均按日／上车地区全外联核对事实与汇总的记录数、金额和距离，同时保留月总对账及维度引用检查；缺失或多余分组不能通过。
+- 距离是浮点数，容差为 `abs(actual - expected) <= 1e-8 + 1e-9 * max(abs(actual), abs(expected))`；事实或汇总中的空／非有限距离直接阻止通过。记录数和金额仍精确比较。
 
 Spark 先完成本运行独立暂存文件。发布使用单个 DuckDB 事务替换目标来源月的事实与指标，并一起更新成功版本。其他月份不处理。地区表是 Q1 固定快照，变化会阻止发布而不会静默改写历史地区含义。
 
@@ -147,15 +167,17 @@ GitHub Actions 在 push、pull request 和手动触发时，于 Ubuntu 24.04 构
 先聚焦再完整验证：
 
 ```powershell
-docker compose run --rm --no-deps --entrypoint python cli -m pytest -q tests/test_contracts.py
+docker compose run --rm --no-deps --entrypoint python cli -m pytest -q tests/test_warehouse.py tests/test_benchmark.py tests/test_reports.py
 docker compose run --rm --no-deps --entrypoint python cli -m pytest -q
 ```
 
 本轮合成 CLI 与依赖检查的完整命令见 [2026-11-02 验证记录](VALIDATION.md)。有已发布的真实一月数据时，可另行执行 `docker compose run --rm --no-deps cli benchmark --month 2024-01 --data-root /opt/airflow/data --repetitions 5`；本轮没有重复该历史性能实验。
 
-完整测试启动真实 Spark，不是 mock 转换。覆盖明确合成样例、重复保留、未知地区、闰日、多原因隔离、来源字段缺失、维度键重复、事实/指标对账、先 1/3 月再补 2 月、同月重跑和事务失败。Airflow REST 测试使用隔离 stub 检查请求/顺序/失败停提；它不代表已经验证真实 Airflow 服务。
+当前完整测试 **31 项**，其中集成测试启动真实 Spark。覆盖明确合成样例、重复保留、未知地区、闰日、多原因隔离、来源字段缺失、维度键重复、先 1/3 月再补 2 月、同月重跑和事务失败；新增内存 DuckDB 测试验证错分组、缺失／多余分组、距离容差及无效距离，另验证实验留档、报告的加权均值与只读输出。Airflow REST 测试使用隔离 stub 检查请求/顺序/失败停提；它不代表已经验证真实 Airflow 服务。
 
 Benchmark 对同一已发布月做地区双角色 Join 与聚合，固定 `local[2]` 和 shuffle 分区，关闭 AQE/自动广播来受控比较显式 BroadcastHashJoin 和 SortMergeJoin。两种物理节点必须实际出现，结果必须相同。预热后交错执行，写出每次耗时、中位数、物理计划和 SQL operator metrics（包含可用 Shuffle 指标）。不计下载/JVM 启动时间，不宣称冷缓存或生产分布式性能；结果无提升也如实记录。合成 9 行只验证实验可运行，有意义的性能结论需要真实固定月份数据。
+
+每次实验生成独立 `experiment_id`，保存为 `benchmarks/<month>-<run_id>-<experiment_id>.json`，其中 `run_id` 继续关联所用的发布快照；同一发布重复实验不会覆盖先前报告。历史文件及已归档的 2026-09-09 实验保留原有命名。
 
 ## 参考来源与个人贡献边界
 

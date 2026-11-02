@@ -1,6 +1,39 @@
 # 验证与历史实测记录
 
-## 2026-11-02 发布复核
+## 2026-11-02 治理补强验收（当前）
+
+本轮补齐日／上车地区粒度对账、距离指标校验、独立实验留档和只读运营报告。数据模型及固定 Q1 数据范围保持不变。
+
+| 核验项 | 当前结果 | 原始证据 |
+|---|---|---|
+| 新增能力聚焦测试 | **22 passed in 1.90s**：分组分配错误、缺失／多余分组、距离容差和空／非有限值、实验报告独立留档、SQL 加权指标及只读报告输出 | [focused-tests.txt](evidence/2026-11-02-governance/focused-tests.txt) |
+| 完整测试，含真实 Spark | **31 passed in 13.89s** | [tests.txt](evidence/2026-11-02-governance/tests.txt) |
+| 真实 Q1 分组对账 | 1、2、3 月均通过新增的日／地区记录数、金额和距离校验；发布 run ID 不变，仍为 9,436,037 条接纳记录、259,585,035.59 美元记录收费总额 | [warehouse-reconciliation.json](evidence/2026-11-02-governance/warehouse-reconciliation.json) |
+| 只读运营报告 | 91 个日期的日趋势、上车地区 Top 10、工作日／周末指标已从真实已发布汇总导出 | [Markdown 报告](evidence/2026-11-02-governance/business-report.md) · [JSON 结果](evidence/2026-11-02-governance/business-report.json) |
+
+记录数和金额按日／地区精确核对，缺失或多余分组阻止通过。距离采用 `abs(actual - expected) <= 1e-8 + 1e-9 * max(abs(actual), abs(expected))`，同时拒绝事实或汇总中的空值及非有限距离；保留月总对账与维度引用检查。
+
+每次性能实验现在生成独立 `experiment_id`，文件名为 `benchmarks/<month>-<run_id>-<experiment_id>.json`，保留 `run_id` 关联发布。聚焦测试验证同一发布重复保存不会覆盖先前报告。**本轮未重跑真实数据性能实验**，下方 2026-09-09 的 Join 数据及原始证据继续保留。
+
+### 当前复现命令
+
+在项目目录使用 PowerShell 7：
+
+```powershell
+docker compose build cli
+docker compose run --rm --no-deps --entrypoint python cli -m pytest -q tests/test_warehouse.py tests/test_benchmark.py tests/test_reports.py
+docker compose run --rm --no-deps --entrypoint python cli -m pytest -q
+foreach ($month in @('2024-01', '2024-02', '2024-03')) {
+  docker compose run --rm --no-deps cli check --month $month --data-root /opt/airflow/data
+}
+docker compose run --rm --no-deps --entrypoint python cli tools/report.py --data-root /opt/airflow/data --format markdown
+```
+
+`check` 和报告命令读取已有真实 Q1 发布；新环境需先按 README 处理对应月份。报告的三份查询为 [日趋势](sql/daily_trends.sql)、[地区 Top 10](sql/top_pickup_zones.sql)、[工作日／周末](sql/weekday_weekend.sql)，各距离均值按总距离除以总记录量计算，工作日与周末日均记录量按各自有记录的日期数归一。
+
+## 2026-11-02 首次发布复核（历史版本）
+
+本节保留治理补强前的 9 项测试及首次发布证据；当前源码的 31 项验收结果见上节。
 
 本轮对 Docker 卷 `nyc-taxi-warehouse_taxi-data` 中已有的 Q1 发布执行只读复核，并在独立临时目录重新运行合成数据测试和 CLI。环境沿用 Python 3.11、Spark 3.5.9、Java 17、DuckDB 1.4.5、Airflow 3.3.1。
 
@@ -15,9 +48,9 @@
 
 JSON 只包含月份级质量汇总、来源摘要、发布标识、复核结果以及历史实验的物理计划与算子指标，不含出租车行级明细。本轮复核读取的是已有发布，不代表重新下载并处理整个 Q1；下方 Airflow 调度顺序与性能测量仍属于 2026-09-09 的历史运行。
 
-### 本轮复现命令
+### 首次发布复核的命令入口
 
-在项目目录以 PowerShell 7 执行；使用已构建的项目镜像，测试和 CLI 均不启动调度服务：
+在项目目录以 PowerShell 7 执行；使用已构建的项目镜像，测试和 CLI 均不启动调度服务。下列命令保留原入口，完整测试数量以执行的源码版本为准：
 
 ```powershell
 docker compose run --rm --no-deps --entrypoint python cli -m pytest -q tests/test_contracts.py

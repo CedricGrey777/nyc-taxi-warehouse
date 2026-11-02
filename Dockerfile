@@ -12,6 +12,8 @@ COPY --chown=airflow:root pyproject.toml /opt/taxi/pyproject.toml
 COPY --chown=airflow:root taxi_warehouse /opt/taxi/taxi_warehouse
 COPY --chown=airflow:root dags /opt/airflow/dags
 COPY --chown=airflow:root tests /opt/taxi/tests
+COPY --chown=airflow:root sql /opt/taxi/sql
+COPY --chown=airflow:root tools /opt/taxi/tools
 ENV PYTHONPATH=/opt/taxi
 WORKDIR /opt/taxi
 RUN mkdir -p /opt/airflow/data
