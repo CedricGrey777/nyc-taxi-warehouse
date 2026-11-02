@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nyc-taxi-warehouse"
+version = "0.1.0"
+description = "Reproducible monthly NYC TLC warehouse for a single development machine"
+requires-python = ">=3.11,<3.12"
+dependencies = ["duckdb==1.4.5", "pyspark==3.5.9"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<9"]
+
+[project.scripts]
+taxi-warehouse = "taxi_warehouse.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["taxi_warehouse*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["spark: starts a local Spark JVM (requires JDK 17)"]
+
